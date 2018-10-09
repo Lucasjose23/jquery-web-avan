@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Tabs - Default functionality</title>
+ <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script>
+          $( function() {
+               var meuTab= $( "#tabs" ).tabs({
+                    active:1,//qual primeiro
+                    collapsible:true,
+                    event:"mouseover"
+                    
+                });
+              meuTab.find(".ui-tabs-nav").sortable({
+                  axis:"x",
+                  stop:function(){
+                      meuTab.tabs("refresh")
+                  }//pode mudar o tabs
+              })
+          } );
+  </script>
+
+    </head>
+    <body>
+        <div id="tabs">
+            <ul>
+                <li><a href="#tab-1">calabresa</a></li>
+                 <li><a href="#tab-2">Marguerita</a></li>
+                  <li><a href="#tab-3">Quatro queijo</a></li>
+                
+            </ul>
+      
+        <div id="tab-1">
+            <h3>Calabresa</h3>
+            <p>All major social networks still support the vast majority of special Unicode characters. There are some exceptions where excessive special character use is not allowed. For example, Google's search engine doesn't display zalgo text or circle text in page titles. But if you're trying to put small text on Tumblr posts or on Facebook status updates and comments, then you should have no trouble at all. This mini text is great for making your comments appear different (and therefore stand out) from the rest.</p>
+            
+        </div>
+        <div id="tab-2">
+             <h3>Marguerita</h3>
+              <p>All major social networks still support the vast majority of special Unicode characters. There are some exceptions where excessive special character use is not allowed. For example, Google's search engine doesn't display zalgo text or circle text in page titles. But if you're trying to put small text on Tumblr posts or on Facebook status updates and comments, then you should have no trouble at all. This mini text is great for making your comments appear different (and therefore stand out) from the rest.</p>
+        </div>
+        <div id="tab-3">
+             <h3>Quatro queixo</h3>
+              <p>All major social networks still support the vast majority of special Unicode characters. There are some exceptions where excessive special character use is not allowed. For example, Google's search engine doesn't display zalgo text or circle text in page titles. But if you're trying to put small text on Tumblr posts or on Facebook status updates and comments, then you should have no trouble at all. This mini text is great for making your comments appear different (and therefore stand out) from the rest.</p>
+            
+        </div>
+              </div>
+    </body>
+</html>

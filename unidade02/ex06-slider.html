@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery UI Slider</title>
+     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+          <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    
+        <style>
+            input[type="text"] {
+                border: none;
+                padding: 5px;
+                margin-top: 20px;
+                font-size:80%;
+            }
+        </style>
+        <script>
+    
+                $(function () {
+                    $('#slider').slider({
+                        step:5,//pulo de 5 em 5
+                        value:20,
+                        min:100,
+                        max:1000,
+                        slide: function(event,ui) {
+                            //ui ja e uma variavel padrao
+                            $('#valor').val("R$"+ui.value);
+                            
+                        }
+                        
+                    });
+                  
+                })
+
+        </script>        
+    </head>
+    <body>
+        <div id="slider"></div>
+        <input type="text" id="valor">
+    </body>
+</html>
